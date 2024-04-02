@@ -1,6 +1,7 @@
 package com.scaler.bmsmarch24evebatch.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.Data;
 
@@ -13,5 +14,6 @@ public class Theatre extends BaseModel{
     private String address;
     @OneToMany
     private List<Screen> screens;
-
+    @ManyToOne
+    private City city;
 }
